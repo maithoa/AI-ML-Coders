@@ -10,3 +10,4 @@ validation/
 *.zip
 *.keras
 *.h5
+*.pyc
