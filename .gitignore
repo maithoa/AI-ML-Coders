@@ -1,0 +1,12 @@
+# Ignore the compressed dataset
+horse-or-human.zip
+validation-horse-or-human.zip
+
+# Ignore the extracted folders
+horse-or-human/
+validation/
+
+# Ignore any other large binary files
+*.zip
+*.keras
+*.h5
