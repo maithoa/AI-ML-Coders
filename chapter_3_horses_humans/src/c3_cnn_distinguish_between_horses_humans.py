@@ -5,7 +5,7 @@ import zipfile
 # Download the dataset - set the URL for the dataset
 url = 'https://storage.googleapis.com/download.tensorflow.org/data/horse-or-human.zip'
 
-training_dir = 'horse-or-human/training/'
+training_dir = 'chapter_3_horses_humans/data/horse-or-human/training/'
 
 # Download the zip file
 file_name = filedownloader(url, training_dir)
