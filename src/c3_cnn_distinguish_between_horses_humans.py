@@ -1,15 +1,14 @@
-import urllib.request
+from file_downloader import download_file as filedownloader
 import zipfile
 
 
 # Download the dataset - set the URL for the dataset
 url = 'https://storage.googleapis.com/download.tensorflow.org/data/horse-or-human.zip'
 
-file_name = 'horse-or-human.zip'
 training_dir = 'horse-or-human/training/'
 
 # Download the zip file
-urllib.request.urlretrieve(url, file_name)
+file_name = filedownloader(url, training_dir)
 
 # Unzip the dataset
 with zipfile.ZipFile(file_name, 'r') as zip_ref:
