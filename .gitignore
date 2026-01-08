@@ -5,9 +5,11 @@ validation-horse-or-human.zip
 # Ignore the extracted folders
 horse-or-human/
 validation/
+data/
 
 # Ignore any other large binary files
 *.zip
 *.keras
 *.h5
 *.pyc
+*.png

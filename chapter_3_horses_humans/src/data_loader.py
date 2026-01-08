@@ -4,7 +4,7 @@ try:
 except ImportError:
     from keras.src.legacy.preprocessing.image import ImageDataGenerator
 
-def create_image_generator(dir_path, target_size=(300, 300), batch_size=32, class_mode='binary', fs=os):
+def create_image_generator(dir_path, target_size=(300, 300), batch_size=32, class_mode='binary', fs=os, shuffle_param=True):
     """
     Load images from the specified directory using Keras ImageDataGenerator.
 
@@ -30,10 +30,11 @@ def create_image_generator(dir_path, target_size=(300, 300), batch_size=32, clas
         dir_path,
         target_size=target_size,
         batch_size=batch_size,
-        class_mode=class_mode
+        class_mode=class_mode,
+        shuffle=shuffle_param
     )
 
     return image_generator
 # Example usage:
-# train_generator = load_images('path/to/training/data')
-# validation_generator = load_images('path/to/validation/data')
+# train_generator = create_image_generator('path/to/training/data')
+# validation_generator = create_image_generator('path/to/validation/data')

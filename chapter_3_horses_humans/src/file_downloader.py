@@ -7,8 +7,12 @@ from pathlib import Path
 def download_file(url, dest_folder):
     if not os.path.exists(dest_folder):
         os.makedirs(dest_folder)  # create folder if it does not exist
-
+    
     filename = os.path.join(dest_folder, url.split('/')[-1])
+
+    if os.path.exists(filename):
+        print(f"--- File already exists: {filename}. Skipping download. ---")
+        return filename
 
     # Download the file with progress bar
     response = requests.get(url, stream=True)
